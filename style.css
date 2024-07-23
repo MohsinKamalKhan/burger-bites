@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --brand-color: #647A02;
+    --light-brand-color: #9ABC00;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+.right-part {
+    background-color: var(--brand-color);
+    display: flex;
+    align-items: center;
+    z-index: -2;
+}
+
+.right-part img {
+    width: 500px;
+    height: 500px;
+    transform: translateX(-50%);
+}
+
+.background-img {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+
+.text-panel {
+    max-width: 40vw;
+    display: grid;
+    gap: 1rem;
+    animation: fade-in 0.5s ease-in;
+}
+
+@keyframes fade-in {
+    from {opacity: 0; scale: 0}
+    to {opacity: 1; scale: 1}
+}
+
+main div:nth-child(1) {
+    margin: auto 3rem;
+}
+
+.main-text {
+    font-family: "Comforter Brush", cursive;
+    font-weight: 400;
+    font-size: 5rem;
+}
+
+.sub-text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: #6F6F6F;
+    opacity: 0.6;
+}
+
+.buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+button {
+    cursor: pointer;
+    padding: 1rem 2rem;
+}
+
+button:hover {
+    opacity: 0.9;
+    scale: 1.1;
+}
+
+.order-now-btn {
+    border-radius: 5rem;
+    background-color: var(--light-brand-color);
+    color: white;
+    border: none;
+}
+
+.our-menu-btn  {
+    text-decoration: underline;
+    border: 2px solid var(--brand-color);
+    background-color: transparent;
+    font-weight: bolder;
+    color: var(--brand-color)
+}
+
+nav {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    animation: translate-in 0.5s ease-in;
+}
+
+@keyframes translate-in {
+    from {transform: translateY(-100%)}
+    to {transform: translateY(0);}
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    padding: 1rem;
+    color: var(--brand-color);
+}
+
+.nav-links p {
+    cursor: pointer;
+}
+
+.nav-links div:nth-child(1) {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.nav-links > p:nth-child(2) {
+    border-bottom: 2px solid var(--brand-color);
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.nav-buttons button {
+    border: none;
+    font-weight: bold;
+    color: white;
+}
+
+.log-in-btn {
+    background-color: transparent;
+
+}
+
+.sign-up-btn {
+    background-color: var(--light-brand-color);
+    border-radius: 0.5rem;
+}
